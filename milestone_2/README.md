@@ -19,4 +19,4 @@ Result: Uif rvjdl cspxo gpy kvnqt pwfs uif mbaz eph.
 python decrypt.py
 Enter key: 1
 ```
-> Note: only letters get shifted with the preservation of case (e.g., `T->U` and `t->u`), while punctuation symbols stay the same.
+> [!NOTE] only letters get shifted with the preservation of case (e.g., `T->U` and `t->u`), while punctuation symbols stay the same.
