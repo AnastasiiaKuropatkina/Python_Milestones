@@ -6,7 +6,7 @@ Your task is to write a solver for quadratic equations. The user enters an equat
 
 This may seem like a lot, so this time let's decompose the problem to several manageable steps.
 
-**Important**
+> [!IMPORTANT]
 > You may not use `if`-statements in this milestone. It is possible to accomplish all the steps using the functions that we've covered this week.
 
 ## Step 1. Process input
