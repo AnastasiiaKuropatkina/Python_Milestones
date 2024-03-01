@@ -32,7 +32,7 @@ print(a, b, c) # 4 4 -8
 ## Step 2. Calculate answer
 Now, once we have all the coefficients, let's remind ourselves of the quadratic formula:
 
-!['The quadratic formula'](./1705016957171_image.png "The quadratic formula")
+!['The quadratic formula'](1705016957171_image.png "The quadratic formula")
 
 Let's find `x1` and `x2!`
 ```python
