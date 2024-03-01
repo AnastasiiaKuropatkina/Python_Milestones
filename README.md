@@ -12,7 +12,7 @@ Each folder in this repository corresponds to a specific milestone. Navigate to 
 
 [Milestone 4 “Trade-offs”](milestone_4) - Developed a solution to find pairs of numbers that sum up to a target value. This includes both a brute-force approach and an optimized version to demonstrate the trade-off between time and space complexity.
 
-[Milestone 5: Ancient, Inc.](milestone_5) - Automate the process of generating reports for employee birthdays and hiring anniversaries for Ancient, Inc. This task involves creating synthetic employee data using Faker and a reports generation, which are printed in console.
+[Milestone 5 “Ancient, Inc.”](milestone_5) - Automate the process of generating reports for employee birthdays and hiring anniversaries for Ancient, Inc. This task involves creating synthetic employee data using Faker and a reports generation, which are printed in console.
 
 
 ## Getting Started
