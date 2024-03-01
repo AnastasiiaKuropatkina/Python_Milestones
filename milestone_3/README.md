@@ -1,4 +1,5 @@
-Milestone 3 “Pascal's Triangle”
+# Milestone 3 “Pascal's Triangle”
+
 Alice loves triangles and math. She wants to create a poster on the wall with [Pascal's triangle](https://en.wikipedia.org/wiki/Pascal%27s_triangle). Let's help her!
 
 Create a file `triangle.py`, where define a function `def get_triangle(rows: int) -> List[List[int]]`, which will return the triangle as a list of lists with the specified number of rows:
