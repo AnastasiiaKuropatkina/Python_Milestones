@@ -14,6 +14,7 @@ Each folder in this repository corresponds to a specific milestone. Navigate to 
 
 [Milestone 5 “Ancient, Inc.”](milestone_5) - Automate the process of generating reports for employee birthdays and hiring anniversaries for Ancient, Inc. This task involves creating synthetic employee data using Faker and a reports generation, which are printed in console.
 
+[Milestone 7 “Ancient, Inc.”](milestone_7) - Develop a Flask-based server application to serve as a backend for a command-line interface (CLI) utility. This utility will interact with the API developed in [Milestone 5 “Ancient, Inc.”](milestone_5).
 
 ## Getting Started
 To clone this repository and review the assignments, ensure you have git installed on your system. Then, run the following command:
