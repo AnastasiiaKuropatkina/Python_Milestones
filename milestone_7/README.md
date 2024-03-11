@@ -29,14 +29,11 @@ or similar.
 To make life easier for departments, HR wants to distribute a cli-utility to query the API like this:
 
 ```bash
-python fetch_report.py april Engineering
-Report for Engineering department for April fetched.
+python fetch_report.py birthdays april HR
+Report for HR department for April fetched.
 Total: 4
 Employees:
-- Apr 1, John Doe
-- Apr 10, Patrick Brown
-- Apr 11, John Wood
-- Apr 30, Helen King
+- 1989-04-13, Marie Small
 ```
 
 or similar.
