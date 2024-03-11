@@ -49,8 +49,7 @@ You need to have Python 3.10 or higher.
 
 - Create a new virtual environment `python3 -m venv ./venv` and activate it
 - Install packages `pip3 install -r requirements.txt`
-- `pip3 install requests`
-- Run the code python3 server.py
+- Run the code `python3 server.py`
 
 To run linting checks locally, you may also do:
 

@@ -3,14 +3,15 @@ from argparse import ArgumentParser
 
 
 def parse_arguments():
-    parser = ArgumentParser(description="Fetch reports for a specified department and month.")
+    parser = ArgumentParser(description="Fetch reports for a specified: event department month.")
+    parser.add_argument("event", help="Month for which to fetch the report, e.g., 'birthdays' or 'anniversaries'.")
     parser.add_argument("month", help="Month for which to fetch the report, e.g., 'April'.")
-    parser.add_argument("department", help="Department to fetch the report for, e.g., 'Engineering'.")
+    parser.add_argument("department", help="Department to fetch the report for, e.g., 'HR'.")
     return parser.parse_args()
 
 
-def fetch_report(month, department):
-    url = f"http://localhost:5000/{month.lower()}?department={department}"
+def fetch_report(event, month, department):
+    url = f"http://localhost:5000/{event.lower()}?month={month.lower()}&department={department}"
     response = requests.get(url)
     if response.status_code == 200:
         report = response.json()
@@ -26,4 +27,4 @@ def fetch_report(month, department):
 
 if __name__ == "__main__":
     args = parse_arguments()
-    fetch_report(args.month, args.department)
+    fetch_report(args.event, args.month, args.department)

@@ -17,11 +17,12 @@ def get_birthdays():
         return 'parameter month cannot be empty', 404
     if department is None:
         return 'parameter department cannot be empty', 404
-    matching_employees = [
-        {"name": emp["name"], "birthday": emp["birthday"]}
-        for emp in employees
-        if emp["department"] == department and month == emp["birthday"].lower()
-    ]
+
+    matching_employees = []
+    for emp in employees:
+        print(emp["department"] == department and month == emp["birthday_month"].lower(), emp["department"], department, emp["birthday_month"].lower(), month)
+        if emp["department"] == department and month == emp["birthday_month"].lower():
+            matching_employees.append({"name": emp["name"], "birthday": emp["birthday"]})
 
     report = {
         "total": len(matching_employees),
@@ -40,10 +41,10 @@ def get_anniversaries():
     if department is None:
         return 'parameter department cannot be empty', 404
 
-    matching_employees = [
-        {"name": emp["name"], "anniversary": emp["anniversary"]}
-        for emp in employees if emp["department"] == department and month in emp["birthday_month"].lower()
-    ]
+    matching_employees = []
+    for emp in employees:
+        if emp["department"] == department and month == emp["hiring_month"]:
+            matching_employees.append({"name": emp["name"], "anniversary": emp["hiring_date"]})
 
     report = {
         "total": len(matching_employees),
@@ -51,11 +52,15 @@ def get_anniversaries():
     }
     return jsonify(report), 200
 
+
 def read_employee_data(filename):
+    employee_data = []
     with open(filename, mode='r', newline='') as file:
         reader = csv.DictReader(file)
-        employee_data = [row for row in reader]
+        for row in reader:
+            employee_data.append(row)
     return employee_data
+
 
 def extract_month_names(employees):
     for employee in employees:
@@ -64,12 +69,14 @@ def extract_month_names(employees):
         birthday_obj = datetime.strptime(birthday_str, '%Y-%m-%d')
         month_name = birthday_obj.strftime('%B')
         employee['birthday_month'] = month_name
+        # Assuming 'hiring' is the key for the employee's birthday date
+        hiring_str = employee['hiring_date']
+        hiring_obj = datetime.strptime(hiring_str, '%Y-%m-%d')
+        hiring_name = hiring_obj.strftime('%B')
+        employee['hiring_month'] = hiring_name
+
 
 if __name__ == '__main__':
     employees = read_employee_data(filename)
     extract_month_names(employees)
-    # for employee in employees:
-    #     print(f"Name: {employee['name']}, Department: {employee['department']}, Birthday: {employee['birthday']}")
-
-    #print("employees==>",employees)
     app.run(debug=True)
