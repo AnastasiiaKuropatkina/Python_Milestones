@@ -1,0 +1,7 @@
+GET http://localhost:5000/birthdays?month=april&department=HR
+Content-Type: aplication/json
+
+###
+
+GET http://localhost:5000/anniversaries?month=april&department=HR
+Content-Type: aplication/json
