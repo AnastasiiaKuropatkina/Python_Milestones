@@ -1,4 +1,4 @@
-№ Milestone 10 “Ancient, Inc. 3”
+# Milestone 10 “Ancient, Inc. 3”
 
 Everybody likes the new employee system in [Ancient, Inc.](milestone_7) developed by you, but users started occasionally spotting bugs, like the incorrect amount of birthdays on a particular month or 500 status codes returned instead of the JSON report.
 
